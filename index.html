@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For My Love Yatri ❤️</title>
+    <meta
+      name="description"
+      content="A magical Valentine's Day website crafted with love for Yatri — our journey, our memories, our forever."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== SCROLL PROGRESS BAR ===== -->
+  <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+
+  <!-- ===== CUSTOM CURSOR ===== -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- ===== LOADING SCREEN ===== -->
+    <div class="loader" id="loader">
+      <div class="loader-heart">
+        <span>❤</span>
+      </div>
+      <p class="loader-text">Loading Love...</p>
+    </div>
+
+    <!-- ===== LANDING / HERO SECTION ===== -->
+    <section class="hero" id="hero">
+      <!-- Three.js canvas will be injected here -->
+      <canvas id="three-canvas"></canvas>
+
+      <div class="hero-content">
+        <p class="hero-tagline reveal-up">✦ A Love Story Worth Remembering ✦</p>
+        <h1 class="hero-title reveal-up">
+          For My Love<br /><span class="hero-name">Yatri</span> ❤️
+        </h1>
+        <p class="hero-subtitle reveal-up">
+          Every moment with you is a poem my heart never forgets.<br />
+          You are my favourite part of every single day.
+        </p>
+        <a href="#story" class="btn-enter reveal-up" id="btn-enter">
+          <span>Begin Our Story</span>
+          <i class="btn-arrow">↓</i>
+        </a>
+      </div>
+
+      <!-- Floating hearts overlay -->
+      <div class="floating-hearts" id="floating-hearts"></div>
+    </section>
+
+    <!-- ===== LOVE STORY TIMELINE SECTION ===== -->
+    <section class="story" id="story">
+      <div class="section-header">
+        <p class="section-label">Chapter One</p>
+        <h2 class="section-title">Our Love Story</h2>
+        <div class="divider-heart">❤</div>
+      </div>
+
+      <div class="timeline">
+        <!-- Memory 1 -->
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-date">The Beginning</div>
+          <div class="timeline-card">
+            <div class="timeline-icon">☕</div>
+            <h3>First Meeting — At the Café</h3>
+            <p>
+              It was a quiet afternoon when we first walked into that cozy
+              little café. The warm lights, the smell of coffee, and then — you.
+              Something shifted inside me the moment our eyes met. We talked for
+              hours like we'd known each other forever, and somewhere between
+              the laughter and the warmth, I knew you were someone special.
+            </p>
+          </div>
+        </div>
+
+        <!-- Memory 2 -->
+        <div class="timeline-item" data-aos="fade-left">
+          <div class="timeline-date">The Moment</div>
+          <div class="timeline-card">
+            <div class="timeline-icon">🤝</div>
+            <h3>Holding Hands — That Magical First Touch</h3>
+            <p>
+              Still at that very same café, our hands found each other across
+              the table. That gentle touch said everything words couldn't. My
+              heart raced, time slowed down, and in that warm, golden moment — I
+              fell a little more in love with you. It was the most romantic
+              feeling I had ever known.
+            </p>
+          </div>
+        </div>
+
+        <!-- Memory 3 -->
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-date">Every Day After</div>
+          <div class="timeline-card">
+            <div class="timeline-icon">🌅</div>
+            <h3>Building Our World Together</h3>
+            <p>
+              From stolen glances to shared sunsets, from deep conversations to
+              comfortable silences — every day with you has been a blessing. You
+              make the ordinary feel extraordinary. With you, even the simplest
+              moments become the most beautiful memories.
+            </p>
+          </div>
+        </div>
+
+        <!-- Memory 4 -->
+        <div class="timeline-item" data-aos="fade-left">
+          <div class="timeline-date">Forever</div>
+          <div class="timeline-card">
+            <div class="timeline-icon">💍</div>
+            <h3>Our Promise — Together, Always</h3>
+            <p>
+              You are my home. In every laugh, every tear, every quiet moment —
+              I choose you. I promise to be your safe place, your biggest
+              supporter, and the one who loves you most fiercely. Forever starts
+              with today, and I want every day to be with you, Yatri.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PHOTO GALLERY SECTION ===== -->
+    <section class="gallery" id="gallery">
+      <div class="section-header">
+        <p class="section-label">Chapter Two</p>
+        <h2 class="section-title">Our Beautiful Memories</h2>
+        <div class="divider-heart">❤</div>
+      </div>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Gallery items injected by JS -->
+      </div>
+
+      <!-- Lightbox -->
+      <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close">
+          ✕
+        </button>
+        <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous">
+          ❮
+        </button>
+        <button class="lightbox-next" id="lightbox-next" aria-label="Next">
+          ❯
+        </button>
+        <div class="lightbox-img-wrap">
+          <img class="lightbox-img" id="lightbox-img" src="" alt="Memory" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LOVE LETTER SECTION ===== -->
+    <section class="letter" id="letter">
+      <div class="section-header">
+        <p class="section-label">Chapter Three</p>
+        <h2 class="section-title">A Letter From My Heart</h2>
+        <div class="divider-heart">❤</div>
+      </div>
+
+      <div class="letter-envelope" id="letter-envelope">
+        <div class="envelope-flap"></div>
+        <div class="envelope-body">
+          <span class="envelope-heart">❤</span>
+          <p>Click to open</p>
+        </div>
+      </div>
+
+      <div class="letter-content" id="letter-content">
+        <div class="letter-paper">
+          <p class="letter-date">My Dearest Yatri,</p>
+          <div class="letter-typed" id="letter-typed"></div>
+          <p class="letter-sign">— Forever Yours, Bhavin 💌</p>
+        </div>
+
+        <!-- Shayari / Gujarati poem -->
+        <div class="shayari-card">
+          <p class="shayari-label">💕 Dil Ki Baat 💕</p>
+          <div class="shayari-text">
+            <p class="shayari-hindi">तुझसे मिलना था मुक़द्दर में लिखा,</p>
+            <p class="shayari-hindi">तेरा नाम था मेरी धड़कन में छुपा।</p>
+            <p class="shayari-hindi">जब से तू आई ज़िंदगी में मेरी,</p>
+            <p class="shayari-hindi">हर लम्हा बन गया एक हसीन दुआ। 💕</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SURPRISE SECTION ===== -->
+    <section class="surprise" id="surprise">
+      <div class="section-header">
+        <p class="section-label">Chapter Four</p>
+        <h2 class="section-title">A Little Surprise For You</h2>
+        <div class="divider-heart">❤</div>
+      </div>
+
+      <div class="surprise-content">
+        <p class="surprise-hint">
+          Psst… I hid something special here just for you 🤫
+        </p>
+        <button class="btn-surprise" id="btn-surprise">
+          <span class="btn-surprise-icon">💝</span>
+          <span>Click for Your Surprise</span>
+        </button>
+      </div>
+
+      <!-- Confetti canvas -->
+      <canvas class="confetti-canvas" id="confetti-canvas"></canvas>
+    </section>
+
+    <!-- ===== SURPRISE POPUP MODAL ===== -->
+    <div class="surprise-modal" id="surprise-modal">
+      <div class="modal-overlay" id="modal-overlay"></div>
+      <div class="modal-box">
+        <button class="modal-close" id="modal-close" aria-label="Close">
+          ✕
+        </button>
+        <div class="modal-hearts">
+          <span>💖</span><span>💕</span><span>❤️</span><span>💗</span
+          ><span>💓</span>
+        </div>
+        <h3 class="modal-title">Yatri, You Are My Everything 💖</h3>
+        <p class="modal-message">
+          No words are enough to describe how much you mean to me. You are the
+          reason I smile even on the hardest days. Every morning feels better
+          because I know you're in my world. I love you more than yesterday, and
+          less than tomorrow.
+          <strong>Always. Forever. Infinitely.</strong> 🌹
+        </p>
+        <div class="modal-footer">
+          <span class="modal-emoji">🥰</span>
+          <p>Happy Valentine's Day, My Love!</p>
+          <span class="modal-emoji">🌹</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="footer-hearts">
+        <span>❤</span><span>💕</span><span>❤</span>
+      </div>
+      <p class="footer-text">
+        Made with every heartbeat, just for <strong>Yatri</strong> 💌
+      </p>
+      <p class="footer-sub">∞ Love you forever and a little more ∞</p>
+    </footer>
+
+    <!-- Background music (optional – add file to /music folder) -->
+    <audio id="bg-music" loop>
+      <!-- <source src="music/love-song.mp3" type="audio/mpeg" /> -->
+    </audio>
+
+    <!-- Music toggle button -->
+    <button
+      class="music-btn"
+      id="music-btn"
+      aria-label="Toggle music"
+      style="display: none"
+    >
+      🎵
+    </button>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
